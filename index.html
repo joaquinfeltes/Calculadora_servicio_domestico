@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora servicio domestico</title>
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+      }
+    </style>
+    <link rel="stylesheet" href="index.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+  </head>
+  <body></body>
+</html>
+
+<fieldset>
+  <h1 style='text-align:center;'>SUELDO MÍNIMO DEL SERVICIO DOMÉSTICO</h1>
+  <h4>Remuneración mínima. Pago mensual. Diciembre de 2020 y enero de 2021 .</h4>
+  <!-- Primer campo de opciones -->
+  <p> Ingresar Modalidad de trabajo: </p>
+  <div class="select-option">
+    <select name="job_type" id="job_type">
+      <option value='blank'>---Elegir una opción---</option>
+      <option value='cama_adentro'>Cama adentro</option>
+      <option value='retiro_mensual'>Con retiro</option>
+    </select>
+  </div>
+  <!-- Opciones de Retiro Mensual campo de opciones -->
+  <p id="label_categories" style="display:none"> Ingresar Categoría: </p>
+  <div class="select-option">
+    <select name="retiro_mensual" id="retiro_mensual" style="display:none">
+      <option value=0>---Elegir una opción---</option>
+      <option value=1>(1) Supervisores.</option>
+      <option value=2>(2) Personal para tareas específicas. Cocineros y otras tareas especiales.</option>
+      <option value=3>(4) Asistencia y cuidado de personas (enfermos, discapacitados, niños, mayores).</option>
+      <option value=4>(5) Tareas generales típicas del hogar. </option>
+    </select>
+  </div>
+  <!-- Opciones de Cama adentro -->
+  <div class="select-option">
+    <select name="cama_adentro" id="cama_adentro" style="display:none">
+      <option value=0>---Elegir una opción---</option>
+      <option value=1>(1) Supervisores.</option>
+      <option value=2>(2) Personal para tareas específicas. Cocineros y otras tareas especiales.</option>
+      <option value=3>(3) Caseros.</option>
+      <option value=4>(4) Asistencia y cuidado de personas (enfermos, discapacitados, niños, mayores).</option>
+      <option value=5>(5) Tareas generales típicas del hogar.</option>
+    </select>
+  </div>
+  <!-- pago por hora/ pago mensual -->
+  <p style="display:none" id="label_modalidad_de_pago">Ingresar tipo de pago:</p>
+  <div class="select-option">
+    <select name = "modalidad_de_pago" id= "modalidad_de_pago" style="display:none">
+      <option value='blank'>---Elegir una opción---</option>
+      <option value='pago_mensual'>Pago mensual (mínimo 24 hs semanales)</option>
+      <option value='pago_por_hora'>Pago por hora (máximo 23 hs semanales)</option>
+    </select>
+  <div/>  
+  <!-- patagonia-->
+  <p style="display:none" id="label_patagonia"> ¿Es zona patagónica?:</p>
+  <div class="select-option">
+    <select name = "patagonia" id= "patagonia" style="display:none">
+      <option value='blank'>---Elegir una opción---</option>
+      <option value= 1>1- No</option>
+      <option value= 1.25>2- Sí (diciembre 2020)</option>
+      <option value= 1.28>3- Sí (enero 2021)</option>
+    </select>
+  <div/>
+
+  <!-- Campo de Horas de trabajo -->
+  <p style="display:none" id="label_job_time"> Ingresar cantidad de horas de trabajo por semana:</p>
+  <div>
+    <input type="number" id="job_time" style="display:none;">
+  </div>
+  <!-- Botón para cálcular -->
+  
+    <div>
+      <a class="icon document color button" type="submit" id="button_calculate" value="Calculate" style="display:none;">
+        Calcular</a></div>
+  
+  <p class='result' id="textDiv"></p>
+  <p class='error' id="errorDiv"></p>
+
+
+</fieldset>
