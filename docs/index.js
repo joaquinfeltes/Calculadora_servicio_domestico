@@ -97,13 +97,13 @@ $(document).ready(function () {
         patagonia = patagonia.toFixed(2);
         antiguedad = antiguedad.toFixed(2);
         total = total.toFixed(2);
-        divB.textContent = "Pago basico por mes: $ ".concat(basic);
+        divB.textContent = "-Pago basico por mes: $ ".concat(basic);
         if (antiguedad > 0) {
-          divA.textContent = "Extra antiguedad: $ ".concat(antiguedad);
+          divA.textContent = "-Extra antiguedad: $ ".concat(antiguedad);
           $("#antiguedadtextDiv").show();
         }
         if (patagonia > 0) {
-          divP.textContent = "Extra Patagonia: $ ".concat(patagonia);
+          divP.textContent = "-Adicional Patagonia: $ ".concat(patagonia);
           $("#patagoniatextDiv").show();
         }
         if (patagonia > 0 || antiguedad > 0) {
@@ -135,13 +135,13 @@ $(document).ready(function () {
         patagonia = patagonia.toFixed(2);
         antiguedad = antiguedad.toFixed(2);
         total = total.toFixed(2);
-        divB.textContent = "Pago basico por semana: $ ".concat(basic);
+        divB.textContent = "-Pago basico por semana: $ ".concat(basic);
         if (antiguedad > 0) {
-          divA.textContent = "Extra antiguedad: $ ".concat(antiguedad);
+          divA.textContent = "-Antiguedad: $ ".concat(antiguedad);
           $("#antiguedadtextDiv").show();
         }
         if (patagonia > 0) {
-          divP.textContent = "Extra Patagonia: $ ".concat(patagonia);
+          divP.textContent = "-Adicional Patagonia: $ ".concat(patagonia);
           $("#patagoniatextDiv").show();
         }
         if (patagonia > 0 || antiguedad > 0) {
