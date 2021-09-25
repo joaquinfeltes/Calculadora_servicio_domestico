@@ -16,10 +16,9 @@
   </head>
   <body></body>
 </html>
-
 <fieldset>
   <h1 style='text-align:center;'>SUELDO MÍNIMO DEL SERVICIO DOMÉSTICO</h1>
-  <h4>Remuneración mínima. Pago mensual. Diciembre de 2020 y enero de 2021 .</h4>
+  <h4>Remuneración mínima. Pago mensual. Desde Septiembre de 2021 .</h4>
   <!-- Primer campo de opciones -->
   <p> Ingresar Modalidad de trabajo: </p>
   <div class="select-option">
@@ -65,11 +64,15 @@
   <div class="select-option">
     <select name = "patagonia" id= "patagonia" style="display:none">
       <option value='blank'>---Elegir una opción---</option>
-      <option value= 1>1- No</option>
-      <option value= 1.25>2- Sí (diciembre 2020)</option>
-      <option value= 1.28>3- Sí (enero 2021)</option>
+      <option value= 0>1- No</option>
+      <option value= 0.30>2- Sí</option>
     </select>
   <div/>
+  <!-- antiguedad-->
+    <p style="display:none" id="label_antiguedad"> Ingresar los años de antiguedad:</p>
+    <div class="select-option">
+      <input type="number" id="antiguedad" style="display:none;">
+    <div/>
 
   <!-- Campo de Horas de trabajo -->
   <p style="display:none" id="label_job_time"> Ingresar cantidad de horas de trabajo por semana:</p>
@@ -80,9 +83,14 @@
   
     <div>
       <a class="icon document color button" type="submit" id="button_calculate" value="Calculate" style="display:none;">
-        Calcular</a></div>
+        Calcular</a>
+    </div>
   
-  <p class='result' id="textDiv"></p>
+  <p class='result' id="basictextDiv"></p>
+  <p class='result' id="antiguedadtextDiv"></p>
+  <p class='result' id="patagoniatextDiv"></p>
+  <p class='result' id="totaltextDiv"></p>
+
   <p class='error' id="errorDiv"></p>
 
 
