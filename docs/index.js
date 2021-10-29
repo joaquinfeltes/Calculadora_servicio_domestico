@@ -1,9 +1,37 @@
-const mensual_retiro_array = [0, 34910, 32433.5, 31644, 28457];
-const mensual_cama_adentro_array = [0, 38886, 36104, 31644, 35264, 31644];
-const por_hora_retiro_array = [0, 279.5, 264.5, 249.5, 231.5];
-const por_hora_cama_adentro_array = [0, 306, 290, 249.5, 279.5, 249.5];
+const CONSTANTS = {
+  JULIO_AGOSTO: {
+    MENSUAL_RETIRO: [0, 31559, 29319.5, 28606, 25725],
+    MENSUAL_CAMA_ADENTRO: [0, 35153, 32638, 28606, 31878.5, 26606],
+    POR_HORA_RETIRO: [0, 252.5, 239, 225.5, 209],
+    POR_HORA_CAMA_ADENTRO: [0, 276.5, 262.5, 225.5, 252.5, 225.5],
+  },
+  SEPTIEMBRE_OCTUBRE: {
+    MENSUAL_RETIRO: [0, 34910, 32433.5, 31644, 28457],
+    MENSUAL_CAMA_ADENTRO: [0, 38886, 36104, 31644, 35264, 31644],
+    POR_HORA_RETIRO: [0, 279.5, 264.5, 249.5, 231.5],
+    POR_HORA_CAMA_ADENTRO: [0, 306, 290, 249.5, 279.5, 249.5],
+  },
+  NOVIEMBRE: {
+    MENSUAL_RETIRO: [0, 36586, 33990.5, 33163, 29823],
+    MENSUAL_CAMA_ADENTRO: [0, 40725.5, 37837, 33163, 36957, 33163],
+    POR_HORA_RETIRO: [0, 293, 277.5, 261.5, 243],
+    POR_HORA_CAMA_ADENTRO: [0, 321, 304, 261.5, 292.5, 261.5],
+  },
+  DICIEMBRE: {
+    MENSUAL_RETIRO: [0, 38541, 35806.5, 34935, 31416.5],
+    MENSUAL_CAMA_ADENTRO: [0, 42930.5, 39859, 34935, 38931.5, 34935],
+    POR_HORA_RETIRO: [0, 309, 292, 275.5, 256],
+    POR_HORA_CAMA_ADENTRO: [0, 338, 320.5, 275.5, 308, 275.5],
+  },
+};
 
 $(document).ready(function () {
+  // month parsing
+  month_idx = "JULIO_AGOSTO";
+  $("#select_month").on("change", function () {
+    month_idx = document.getElementById("select_month").value;
+  });
+
   $("#job_type").on("change", function () {
     valSelectJob = $(this).val();
     select_value = 0;
@@ -83,9 +111,9 @@ $(document).ready(function () {
     $("#totaltextDiv").hide();
     if (payment_method === "pago_mensual") {
       if (valSelectJob == "cama_adentro") {
-        select_value = mensual_cama_adentro_array[select_value_idx];
+        select_value = CONSTANTS[month_idx].MENSUAL_CAMA_ADENTRO[select_value_idx];
       } else if (valSelectJob == "retiro_mensual") {
-        select_value = mensual_retiro_array[select_value_idx];
+        select_value = CONSTANTS[month_idx].MENSUAL_RETIRO[select_value_idx];
       }
       if (jobTime >= 24) {
         producto = select_value / 48;
@@ -122,9 +150,9 @@ $(document).ready(function () {
       }
     } else if (payment_method === "pago_por_hora") {
       if (valSelectJob == "cama_adentro") {
-        select_value = por_hora_cama_adentro_array[select_value_idx];
+        select_value = CONSTANTS[month_idx].POR_HORA_CAMA_ADENTRO[select_value_idx];
       } else if (valSelectJob == "retiro_mensual") {
-        select_value = por_hora_retiro_array[select_value_idx];
+        select_value = CONSTANTS[month_idx].POR_HORA_RETIRO[select_value_idx];
       }
       if (jobTime < 24) {
         basic = select_value * jobTime;

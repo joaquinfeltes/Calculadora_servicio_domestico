@@ -17,81 +17,109 @@
   <body></body>
 </html>
 <fieldset>
-  <h1 style='text-align:center;'>SUELDO MÍNIMO DEL SERVICIO DOMÉSTICO</h1>
-  <h4>Remuneración mínima. Pago mensual. Desde Septiembre de 2021 .</h4>
+  <h1 style="text-align: center">SUELDO MÍNIMO DEL SERVICIO DOMÉSTICO</h1>
+  <h4>Remuneración mínima. Pago mensual. 2° semestre de 2021 .</h4>
+
+  <!-- Opciones del mes -->
+  <p>Eligir el mes</p>
+  <div class="select-option">
+    <select name="select_month" id="select_month">
+      <option value="JULIO_AGOSTO">---Elegir una opción---</option>
+      <option value="JULIO_AGOSTO">Julio</option>
+      <option value="JULIO_AGOSTO">Agosto</option>
+      <option value="SEPTIEMBRE_OCTUBRE">Septiembre</option>
+      <option value="SEPTIEMBRE_OCTUBRE">Octubre</option>
+      <option value="NOVIEMBRE">Noviembre</option>
+      <option value="DICIEMBRE">Diciembre</option>
+    </select>
+  </div>
+
   <!-- Primer campo de opciones -->
-  <p> Ingresar Modalidad de trabajo: </p>
+  <p>Ingresar Modalidad de trabajo:</p>
   <div class="select-option">
     <select name="job_type" id="job_type">
-      <option value='blank'>---Elegir una opción---</option>
-      <option value='cama_adentro'>Cama adentro</option>
-      <option value='retiro_mensual'>Con retiro</option>
+      <option value="blank">---Elegir una opción---</option>
+      <option value="cama_adentro">Cama adentro</option>
+      <option value="retiro_mensual">Con retiro</option>
     </select>
   </div>
   <!-- Opciones de Retiro Mensual campo de opciones -->
-  <p id="label_categories" style="display:none"> Ingresar Categoría: </p>
+  <p id="label_categories" style="display: none">Ingresar Categoría:</p>
   <div class="select-option">
-    <select name="retiro_mensual" id="retiro_mensual" style="display:none">
-      <option value=0>---Elegir una opción---</option>
-      <option value=1>(1) Supervisores.</option>
-      <option value=2>(2) Personal para tareas específicas. Cocineros y otras tareas especiales.</option>
-      <option value=3>(4) Asistencia y cuidado de personas (enfermos, discapacitados, niños, mayores).</option>
-      <option value=4>(5) Tareas generales típicas del hogar. </option>
+    <select name="retiro_mensual" id="retiro_mensual" style="display: none">
+      <option value="0">---Elegir una opción---</option>
+      <option value="1">(1) Supervisores.</option>
+      <option value="2">
+        (2) Personal para tareas específicas. Cocineros y otras tareas especiales.
+      </option>
+      <option value="3">
+        (4) Asistencia y cuidado de personas (enfermos, discapacitados, niños, mayores).
+      </option>
+      <option value="4">(5) Tareas generales típicas del hogar.</option>
     </select>
   </div>
   <!-- Opciones de Cama adentro -->
   <div class="select-option">
-    <select name="cama_adentro" id="cama_adentro" style="display:none">
-      <option value=0>---Elegir una opción---</option>
-      <option value=1>(1) Supervisores.</option>
-      <option value=2>(2) Personal para tareas específicas. Cocineros y otras tareas especiales.</option>
-      <option value=3>(3) Caseros.</option>
-      <option value=4>(4) Asistencia y cuidado de personas (enfermos, discapacitados, niños, mayores).</option>
-      <option value=5>(5) Tareas generales típicas del hogar.</option>
+    <select name="cama_adentro" id="cama_adentro" style="display: none">
+      <option value="0">---Elegir una opción---</option>
+      <option value="1">(1) Supervisores.</option>
+      <option value="2">
+        (2) Personal para tareas específicas. Cocineros y otras tareas especiales.
+      </option>
+      <option value="3">(3) Caseros.</option>
+      <option value="4">
+        (4) Asistencia y cuidado de personas (enfermos, discapacitados, niños, mayores).
+      </option>
+      <option value="5">(5) Tareas generales típicas del hogar.</option>
     </select>
   </div>
   <!-- pago por hora/ pago mensual -->
-  <p style="display:none" id="label_modalidad_de_pago">Ingresar tipo de pago:</p>
+  <p style="display: none" id="label_modalidad_de_pago">Ingresar tipo de pago:</p>
   <div class="select-option">
-    <select name = "modalidad_de_pago" id= "modalidad_de_pago" style="display:none">
-      <option value='blank'>---Elegir una opción---</option>
-      <option value='pago_mensual'>Pago mensual (mínimo 24 hs semanales)</option>
-      <option value='pago_por_hora'>Pago por hora (máximo 23 hs semanales)</option>
+    <select name="modalidad_de_pago" id="modalidad_de_pago" style="display: none">
+      <option value="blank">---Elegir una opción---</option>
+      <option value="pago_mensual">Pago mensual (mínimo 24 hs semanales)</option>
+      <option value="pago_por_hora">Pago por hora (máximo 23 hs semanales)</option>
     </select>
-  <div/>  
+  </div>
   <!-- patagonia-->
-  <p style="display:none" id="label_patagonia"> ¿Es zona patagónica?:</p>
+  <p style="display: none" id="label_patagonia">¿Es zona patagónica?:</p>
   <div class="select-option">
-    <select name = "patagonia" id= "patagonia" style="display:none">
-      <option value='blank'>---Elegir una opción---</option>
-      <option value= 0>1- No</option>
-      <option value= 0.30>2- Sí</option>
+    <select name="patagonia" id="patagonia" style="display: none">
+      <option value="blank">---Elegir una opción---</option>
+      <option value="0">1- No</option>
+      <option value="0.30">2- Sí</option>
     </select>
-  <div/>
+  </div>
   <!-- antiguedad-->
-    <p style="display:none" id="label_antiguedad"> Ingresar los años de antiguedad:</p>
-    <div class="select-option">
-      <input type="number" id="antiguedad" style="display:none;">
-    <div/>
+  <p style="display: none" id="label_antiguedad">Ingresar los años de antiguedad:</p>
+  <div class="select-option">
+    <input type="number" id="antiguedad" style="display: none" />
+  </div>
 
   <!-- Campo de Horas de trabajo -->
-  <p style="display:none" id="label_job_time"> Ingresar cantidad de horas de trabajo por semana:</p>
+  <p style="display: none" id="label_job_time">Ingresar cantidad de horas de trabajo por semana:</p>
   <div>
-    <input type="number" id="job_time" style="display:none;">
+    <input type="number" id="job_time" style="display: none" />
   </div>
   <!-- Botón para cálcular -->
-  
-    <div>
-      <a class="icon document color button" type="submit" id="button_calculate" value="Calculate" style="display:none;">
-        Calcular</a>
-    </div>
-  
-  <p class='result' id="basictextDiv"></p>
-  <p class='result' id="antiguedadtextDiv"></p>
-  <p class='result' id="patagoniatextDiv"></p>
-  <p class='total' id="totaltextDiv"></p>
 
-  <p class='error' id="errorDiv"></p>
+  <div>
+    <a
+      class="icon document color button"
+      type="submit"
+      id="button_calculate"
+      value="Calculate"
+      style="display: none"
+    >
+      Calcular</a
+    >
+  </div>
 
+  <p class="result" id="basictextDiv"></p>
+  <p class="result" id="antiguedadtextDiv"></p>
+  <p class="result" id="patagoniatextDiv"></p>
+  <p class="total" id="totaltextDiv"></p>
 
+  <p class="error" id="errorDiv"></p>
 </fieldset>
