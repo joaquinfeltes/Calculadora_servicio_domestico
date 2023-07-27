@@ -95,11 +95,19 @@ const CONSTANTS = {
     POR_HORA_RETIRO: [0, 937.5, 887.5, 838, 777],
     POR_HORA_CAMA_ADENTRO: [0, 1026.5, 973, 838, 937.5, 838],
   },
+  JULIO_2023: {
+    MENSUAL_RETIRO: [0,  140359.5, 130402, 127228, 114415],
+    MENSUAL_CAMA_ADENTRO: [0, 156344.5, 145159.5, 127228, 141782, 127228],
+    POR_HORA_RETIRO: [0, 1125, 1065, 1006, 932.5],
+    POR_HORA_CAMA_ADENTRO: [0, 1232, 1168, 1006, 1125, 1006],
+  }
 };
 
 $(document).ready(function () {
   // month parsing
   month_idx = "AGOSTO_2022";
+  $("#job_time").val(0);
+  $("#antiguedad").val(0);
   $("#select_month").on("change", function () {
     month_idx = document.getElementById("select_month").value;
   });
@@ -149,8 +157,6 @@ $(document).ready(function () {
     }
   });
   $("select").on("change", function () {
-    $("#job_time").val(0);
-    $("#antiguedad").val(0);
     $("#basictextDiv").hide();
     $("#antiguedadtextDiv").hide();
     $("#patagoniatextDiv").hide();
