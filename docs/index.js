@@ -152,6 +152,7 @@ $(document).ready(function () {
     valSelectJob = $(this).val();
     select_value = 0;
     if (valSelectJob == "cama_adentro") {
+      select_value_idx = document.getElementById("cama_adentro").value;
       $("#retiro_mensual").hide();
       $("#cama_adentro").show();
       $("#label_categories").show();
@@ -165,6 +166,7 @@ $(document).ready(function () {
       $("#label_antiguedad").show();
       $("#antiguedad").show();
     } else if (valSelectJob == "retiro_mensual") {
+      select_value_idx = document.getElementById("retiro_mensual").value;
       $("#cama_adentro").hide();
       $("#retiro_mensual").show();
       $("#label_categories").show();
