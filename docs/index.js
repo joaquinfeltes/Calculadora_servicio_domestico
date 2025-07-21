@@ -4,88 +4,104 @@ const CONSTANTS = {
         MENSUAL_CAMA_ADENTRO: [0, 237435.5, 220449, 193217, 215320, 193217],
         POR_HORA_RETIRO: [0, 1708.5, 1617.5, 1528, 1416.5],
         POR_HORA_CAMA_ADENTRO: [0, 1871.5, 1773.5, 1528, 1708.5, 1528],
+        NO_REMUNERATIVO: [0, 0, 0],
     },
     FEBRERO_2024: {
         MENSUAL_RETIRO: [0,  255791, 237644, 231860, 208510],
         MENSUAL_CAMA_ADENTRO: [0, 284923, 264539, 231860, 258384, 231860],
         POR_HORA_RETIRO: [0, 2050, 1941, 1834, 1700],
         POR_HORA_CAMA_ADENTRO: [0, 2246, 2128, 1834, 2050, 1834],
+        NO_REMUNERATIVO: [0, 0, 0],
     },
     MARZO_2024: {
         MENSUAL_RETIRO: [0,  294160, 273291, 266639, 239786],
         MENSUAL_CAMA_ADENTRO: [0, 327661, 304220, 266639, 297142, 266639],
         POR_HORA_RETIRO: [0, 2358, 2232, 2109, 1955],
         POR_HORA_CAMA_ADENTRO: [0, 2583, 2447, 2109, 2358, 2109],
+        NO_REMUNERATIVO: [0, 0, 0],
     },
     ABRIL_2024: {
         MENSUAL_RETIRO: [0,  326518, 303353, 295970, 266163],
         MENSUAL_CAMA_ADENTRO: [0, 363704, 337684, 295970, 329827, 295970],
         POR_HORA_RETIRO: [0, 2617, 2478, 2341, 2170],
         POR_HORA_CAMA_ADENTRO: [0, 2867, 2717, 2341, 2617, 2341],
+        NO_REMUNERATIVO: [0, 0, 0],
     },
     MAYO_2024: {
         MENSUAL_RETIRO: [0,  349374, 324588, 316688, 284794],
         MENSUAL_CAMA_ADENTRO: [0, 389163, 361322, 316688, 352915, 316688],
         POR_HORA_RETIRO: [0, 2800, 2651, 2504, 2322],
         POR_HORA_CAMA_ADENTRO: [0, 3067, 2907, 2504, 2800, 2504],
+        NO_REMUNERATIVO: [0, 0, 0],
     },
     JULIO_2024: {
         MENSUAL_RETIRO: [0,  379070, 352177, 343606, 309001],
         MENSUAL_CAMA_ADENTRO: [0, 422241, 392034, 343606, 382912, 343606],
         POR_HORA_RETIRO: [0, 3038, 2876, 2716, 2519],
         POR_HORA_CAMA_ADENTRO: [0, 3327, 3154, 2716, 3038, 2716],
+        NO_REMUNERATIVO: [0, 0, 0],
     },
     AGOSTO_2024: {
         MENSUAL_RETIRO: [0,  394233, 366265, 357350, 321365],
         MENSUAL_CAMA_ADENTRO: [0, 439131, 407715, 357350, 398229, 357350],
         POR_HORA_RETIRO: [0, 3159, 2991, 2825, 2620],
         POR_HORA_CAMA_ADENTRO: [0, 3460, 3280, 2825, 3159, 2825],
+        NO_REMUNERATIVO: [0, 0, 0],
     },
     SEPTIEMBRE_2024: {
         MENSUAL_RETIRO: [0,  406849, 377985, 368786, 331654],
         MENSUAL_CAMA_ADENTRO: [0, 453184, 420762, 368786, 410973, 368786],
         POR_HORA_RETIRO: [0, 3261, 3087, 2916, 2704],
         POR_HORA_CAMA_ADENTRO: [0, 3572, 3385, 2916, 3261, 2916],
+        NO_REMUNERATIVO: [0, 0, 0],
     },
     OCTUBRE_2024: {
         MENSUAL_RETIRO: [0,  418241, 388569, 379112, 340931],
         MENSUAL_CAMA_ADENTRO: [0, 465873, 432544, 379112, 422480, 379112],
         POR_HORA_RETIRO: [0, 3352, 3174, 2998, 2779],
         POR_HORA_CAMA_ADENTRO: [0, 3672, 3480, 2998, 3352, 2998],
+        NO_REMUNERATIVO: [0, 0, 0],
     },
     NOVIEMBRE_2024: {
         MENSUAL_RETIRO: [0,  418241, 388569, 379112, 340931],
         MENSUAL_CAMA_ADENTRO: [0, 465873, 432544, 379112, 422480, 379112],
         POR_HORA_RETIRO: [0, 3352, 3174, 2998, 2779],
         POR_HORA_CAMA_ADENTRO: [0, 3672, 3480, 2998, 3352, 2998],
+        NO_REMUNERATIVO: [0, 0, 0],
     },
     DICIEMBRE_2024: {
         MENSUAL_RETIRO: [0,  425769, 395563, 385936, 347068],
         MENSUAL_CAMA_ADENTRO: [0, 474259, 440329, 385936, 430085, 385936],
         POR_HORA_RETIRO: [0, 3413, 3231, 3052, 2829],
         POR_HORA_CAMA_ADENTRO: [0, 3738, 3542, 3052, 3413, 3052],
+        NO_REMUNERATIVO: [0, 0, 0],
     },
     ENERO_2025: {
         MENSUAL_RETIRO: [0,  430878, 400310, 390567, 351233],
         MENSUAL_CAMA_ADENTRO: [0, 479950, 445613, 390567, 435246, 390567],
         POR_HORA_RETIRO: [0, 3454, 3270, 3089, 2863],
         POR_HORA_CAMA_ADENTRO: [0, 3783, 3585, 3089, 3454, 3089],
+        NO_REMUNERATIVO: [0, 0, 0],
+
     },
     JULIO_2025: {
         MENSUAL_RETIRO: [0,  450418, 418464, 408279, 367171],
         MENSUAL_CAMA_ADENTRO: [0, 501716, 465821, 408279, 454984, 408279],
         POR_HORA_RETIRO: [0, 3611, 3418, 3229, 2992],
         POR_HORA_CAMA_ADENTRO: [0, 3995, 3748, 3229, 3610, 3229],
+        NO_REMUNERATIVO: [4000, 7000, 10000],
     },
 };
 
 $(document).ready(function () {
   // month parsing
+  no_remunerated = 0;
   month_idx = "AGOSTO_2022";
   $("#job_time").val(0);
   $("#antiguedad").val(0);
   $("#select_month").on("change", function () {
     month_idx = document.getElementById("select_month").value;
+    $("#noRemunerativatextDiv").hide();
   });
 
   $("#job_type").on("change", function () {
@@ -140,6 +156,7 @@ $(document).ready(function () {
     $("#patagoniatextDiv").hide();
     $("#totaltextDiv").hide();
     $("#errorDiv").hide();
+    $("#noRemunerativatextDiv").hide();
   });
   $("#retiro_mensual").on("change", function () {
     select_value_idx = document.getElementById("retiro_mensual").value;
@@ -155,16 +172,30 @@ $(document).ready(function () {
   });
   $("#button_calculate").on("click", function () {
     jobTime = $("#job_time").val();
+
+    if (jobTime < 12) {
+      no_remunerated = CONSTANTS[month_idx].NO_REMUNERATIVO[0];
+    } else if (jobTime >= 12 && jobTime <= 15) {
+      no_remunerated = CONSTANTS[month_idx].NO_REMUNERATIVO[1];
+    }
+    else if (jobTime > 15) {
+      no_remunerated = CONSTANTS[month_idx].NO_REMUNERATIVO[2];
+    } else {
+      no_remunerated = 0;
+    }
     antiguedad = $("#antiguedad").val();
     var divB = document.getElementById("basictextDiv");
     var divA = document.getElementById("antiguedadtextDiv");
     var divP = document.getElementById("patagoniatextDiv");
     var divT = document.getElementById("totaltextDiv");
+    var divNR = document.getElementById("noRemunerativatextDiv");
     var divE = document.getElementById("errorDiv");
+    divNR.textContent = "Suma no remunerativa del mes: $ ".concat(no_remunerated);
     $("#basictextDiv").hide();
     $("#antiguedadtextDiv").hide();
     $("#patagoniatextDiv").hide();
     $("#totaltextDiv").hide();
+    $("#noRemunerativatextDiv").hide();
     if (payment_method === "pago_mensual") {
       if (valSelectJob == "cama_adentro") {
         select_value = CONSTANTS[month_idx].MENSUAL_CAMA_ADENTRO[select_value_idx];
@@ -196,6 +227,12 @@ $(document).ready(function () {
         divT.textContent = "Pago total por mes: $ ".concat(total);
         $("#totaltextDiv").show();
         $("#errorDiv").hide();
+        $("#noRemunerativatextDiv").show();
+        if (no_remunerated > 0) {
+          $("#noRemunerativatextDiv").show();
+        } else {
+          $("#noRemunerativatextDiv").hide();
+        }
       } else {
         divE.textContent = "Por menos de 24 horas semanales, corresponde pago por hora.";
         $("#errorDiv").show();
@@ -203,6 +240,7 @@ $(document).ready(function () {
         $("#antiguedadtextDiv").hide();
         $("#patagoniatextDiv").hide();
         $("#totaltextDiv").hide();
+        $("#noRemunerativatextDiv").hide();
       }
     } else if (payment_method === "pago_por_hora") {
       if (valSelectJob == "cama_adentro") {
@@ -234,6 +272,11 @@ $(document).ready(function () {
         divT.textContent = "Pago total por semana: $ ".concat(total);
         $("#totaltextDiv").show();
         $("#errorDiv").hide();
+        if (no_remunerated > 0) {
+          $("#noRemunerativatextDiv").show();
+        } else {
+          $("#noRemunerativatextDiv").hide();
+        }
       } else {
         divE.textContent = "Desde 24 horas semanales, corresponde pago mensual.";
         $("#errorDiv").show();
@@ -241,6 +284,7 @@ $(document).ready(function () {
         $("#antiguedadtextDiv").hide();
         $("#patagoniatextDiv").hide();
         $("#totaltextDiv").hide();
+        $("#noRemunerativatextDiv").hide();
       }
     }
   });
