@@ -101,6 +101,22 @@ input[type="number"]:focus {
   outline: none;
 }
 
+input[type="text"],
+input[type="email"] {
+  background: #e4e4e4;
+  font-size: 15px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  width: 94%;
+  margin-left: 3%;
+  margin-right: 3%;
+  height: 30px;
+  padding: 0 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  color: rgb(127, 25, 84);
+  box-sizing: border-box;
+}
+
 /* para sacar las flechas en el input*/
 
 /* Chrome, Safari, Edge, Opera */
