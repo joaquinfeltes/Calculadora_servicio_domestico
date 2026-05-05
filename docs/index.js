@@ -114,17 +114,6 @@ const CONSTANTS = {
 };
 
 $(document).ready(function () {
-  function hasValidUserData() {
-    const userName = $("#user_name").val().trim();
-    const userEmail = $("#user_email").val().trim();
-    const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(userEmail);
-    return {
-      isValid: userName.length > 0 && isValidEmail,
-      userName,
-      userEmail,
-    };
-  }
-
   // month parsing
   no_remunerated = 0;
   month_idx = "AGOSTO_2022";
@@ -152,9 +141,6 @@ $(document).ready(function () {
       $("#patagonia").show();
       $("#label_antiguedad").show();
       $("#antiguedad").show();
-      $("#label_user_data").show();
-      $("#user_name").show();
-      $("#user_email").show();
     } else if (valSelectJob == "retiro_mensual") {
       select_value_idx = document.getElementById("retiro_mensual").value;
       $("#cama_adentro").hide();
@@ -169,9 +155,6 @@ $(document).ready(function () {
       $("#patagonia").show();
       $("#label_antiguedad").show();
       $("#antiguedad").show();
-      $("#label_user_data").show();
-      $("#user_name").show();
-      $("#user_email").show();
     } else {
       $("#cama_adentro").hide();
       $("#retiro_mensual").hide();
@@ -185,13 +168,9 @@ $(document).ready(function () {
       $("#patagonia").hide();
       $("#label_antiguedad").hide();
       $("#antiguedad").hide();
-      $("#label_user_data").hide();
-      $("#user_name").hide();
-      $("#user_email").hide();
     }
   });
   $("select").on("change", function () {
-    $("#userResultText").hide();
     $("#basictextDiv").hide();
     $("#antiguedadtextDiv").hide();
     $("#patagoniatextDiv").hide();
@@ -211,12 +190,7 @@ $(document).ready(function () {
   $("#patagonia").on("change", function () {
     patagonia_percentage = document.getElementById("patagonia").value;
   });
-  $("#user_name, #user_email").on("input", function () {
-    $("#userResultText").hide();
-  });
   $("#button_calculate").on("click", function () {
-    const userData = hasValidUserData();
-    const divUser = document.getElementById("userResultText");
     jobTime = $("#job_time").val();
 
     if (jobTime < 12) {
@@ -236,18 +210,6 @@ $(document).ready(function () {
     var divT = document.getElementById("totaltextDiv");
     var divNR = document.getElementById("noRemunerativatextDiv");
     var divE = document.getElementById("errorDiv");
-    if (!userData.isValid) {
-      divE.textContent = "Completá nombre y correo válido para ver el resultado.";
-      $("#errorDiv").show();
-      $("#userResultText").hide();
-      $("#basictextDiv").hide();
-      $("#antiguedadtextDiv").hide();
-      $("#patagoniatextDiv").hide();
-      $("#totaltextDiv").hide();
-      $("#noRemunerativatextDiv").hide();
-      return;
-    }
-
     divNR.textContent = "Suma no remunerativa del mes: $ ".concat(no_remunerated);
     $("#basictextDiv").hide();
     $("#antiguedadtextDiv").hide();
