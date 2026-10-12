@@ -32,14 +32,14 @@ const PAYMENT_MODES = {
     isValidHours: (hours) => hours >= HORAS_MINIMAS_PAGO_MENSUAL,
     errorMessage: "Por menos de 24 horas semanales, corresponde pago por hora.",
     basic: (rate, hours) => (rate / SEMANAS_HORAS_DIVISOR) * hours,
-    labels: { basic: "Pago basico por mes", total: "Pago total por mes" },
+    labels: { basic: "Pago básico por mes", total: "Pago total por mes" },
   },
   pago_por_hora: {
     rateKeys: { cama_adentro: "POR_HORA_CAMA_ADENTRO", retiro_mensual: "POR_HORA_RETIRO" },
     isValidHours: (hours) => hours < HORAS_MINIMAS_PAGO_MENSUAL,
     errorMessage: "Desde 24 horas semanales, corresponde pago mensual.",
     basic: (rate, hours) => rate * hours,
-    labels: { basic: "Pago basico por semana", total: "Pago total por semana" },
+    labels: { basic: "Pago básico por semana", total: "Pago total por semana" },
   },
 };
 
