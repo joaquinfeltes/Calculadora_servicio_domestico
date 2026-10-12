@@ -90,24 +90,45 @@ function renderPayment(mode, payment, noRemunerativo) {
 function onCalculate() {
   hideResults();
 
+  const showError = (text) => showResult("errorDiv", text);
+
+  const monthData = CONSTANTS[$("#select_month").val()];
+  if (!monthData) return showError("Para calcular la remuneración debes elegir un mes.");
+
   const mode = PAYMENT_MODES[$("#modalidad_de_pago").val()];
-  if (!mode) return;
+  if (!mode) return showError("Para calcular la remuneración debes elegir el tipo de pago.");
 
   const jobType = $("#job_type").val();
-  const hours = Number($("#job_time").val());
-  const monthData = CONSTANTS[$("#select_month").val()];
+  const category = $("#" + jobType).val();
+  if (!CATEGORY_SELECTS.includes(jobType) || category === "0") {
+    return showError("Para calcular la remuneración debes elegir una categoría.");
+  }
 
-  if (!mode.isValidHours(hours)) {
-    showResult("errorDiv", mode.errorMessage);
-    return;
+  // Se valida el valor crudo: Number("blank") daría NaN
+  if ($("#patagonia").val() === "blank") {
+    return showError("Para calcular la remuneración debes indicar si es zona patagónica.");
+  }
+
+  // Number("") daría 0, por eso se rechaza el campo vacío
+  const hours = Number($("#job_time").val());
+  if ($("#job_time").val() === "" || !(hours > 0)) {
+    return showError("Para calcular la remuneración debes ingresar las horas de trabajo por semana.");
+  }
+
+  if (!mode.isValidHours(hours)) return showError(mode.errorMessage);
+
+  // Un campo vacío cuenta como 0 años
+  const antiguedadYears = Number($("#antiguedad").val());
+  if (!(antiguedadYears >= 0)) {
+    return showError("Los años de antigüedad no pueden ser negativos.");
   }
 
   const payment = calculatePayment(mode, monthData, {
     jobType,
-    category: $("#" + jobType).val(),
+    category,
     hours,
     isPatagonia: Number($("#patagonia").val()),
-    antiguedadYears: Number($("#antiguedad").val()),
+    antiguedadYears,
   });
   renderPayment(mode, payment, getNoRemunerativo(monthData, hours));
 }
